@@ -1,0 +1,122 @@
+<ion-view>
+  <ion-content>
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Blood Group
+        </div>
+        <select ng-model="postDetails.bloodGroup">
+          <option selected>A Positive</option>
+          <option>B Positive</option>
+          <option>O Positive</option>
+          <option>A Negative</option>
+          <option>B Negative</option>
+          <option>O Negative</option>
+        </select>
+      </label>
+
+      <div>
+      <span class="item item-input">
+        <span class="input-label">
+          No. of Units<input type="number" ng-model="postDetails.noOfUnits">
+        </span>
+
+      </span>
+
+      </div>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Urgency:
+        </div>
+        <select ng-model="postDetails.hours" )>
+          <option selected>Urgent</option>
+          <option>Within 5 hours</option>
+          <option>Within 12 hours</option>
+          <option>Within 24 hours</option>
+          <option>Within 2 days</option>
+          <option>Within Week</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Country
+        </div>
+        <select ng-model="postDetails.country">
+          <option selected>PAKISTAN</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          State
+        </div>
+        <select ng-model="postDetails.city">
+          <option selected>Karachi</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Hospitals
+        </div>
+        <select ng-model="postDetails.hospitals">
+          <option selected>Indus Hospital</option>
+          <option>Ziauddin Hospital</option>
+          <option>Agha Khan Hospital</option>
+          <option>Liaquat National Hospital</option>
+          <option>OMI</option>
+          <option>Jinnah Hospital</option>
+          <option>Holy Family Hospital</option>
+
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Your Relation with Patient
+        </div>
+        <select ng-model="postDetails.relation">
+          <option selected>Father</option>
+          <option>Mother</option>
+          <option>Son</option>
+          <option>Daughter</option>
+          <option>Aunt</option>
+          <option>Uncle</option>
+          <option>Nephew</option>
+          <option>Niece</option>
+          <option>Friend</option>
+          <option>Neighbour</option>
+          <option>None</option>
+        </select>
+      </label>
+
+      <div>
+      <span class="item item-input">
+        <span class="input-label">
+          Contact Number<input type="number" ng-model="postDetails.contactNumber">
+        </span>
+
+      </span>
+
+      </div>
+
+
+      <div>
+      <span class="item item-input">
+        <span class="input-label">
+          Addition Instructions<input type="text" ng-model="postDetails.Instructions">
+        </span>
+
+      </span>
+
+      </div>
+
+
+      <button class="button button-positive" type="submit" ui-sref="feed" ng-click="sendToFirebase(postDetails)">Post</button>
+    </div>
+  </ion-content>
+</ion-view>
+
